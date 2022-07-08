@@ -1,21 +1,23 @@
-import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
-import Header from './app/Header';
+// import { StatusBar } from "expo-status-bar";
+import React from "react";
+import {StatusBar, StyleSheet, View} from "react-native";
 
-const App = () => {
+import Navigation from "./app/Navigation";
+
+export default function App() {
   return (
-    <SafeAreaView style={Styles.header}>
-      <Header />
-      <Text style={Styles.text}>Hello Wold</Text>
-    </SafeAreaView>
+    <>
+      <StatusBar style="auto" />
+      <View style={styles.container}>
+        <Navigation />
+      </View>
+    </>
   );
-};
+}
 
-const Styles = {
-  text: {
-    fontSize: 20,
-    color: '#000',
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#f0f0f0",
   },
-};
-
-export default App;
+});

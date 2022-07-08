@@ -19,6 +19,8 @@ target 'firstApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'react-native-voximplant', :path => '../node_modules/react-native-voximplant'
+
   target 'firstAppTests' do
     inherit! :complete
     # Pods for testing
